@@ -1,0 +1,28 @@
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: 'home.page.html',
+  styleUrls: ['home.page.scss'],
+})
+export class HomePage implements OnInit {
+  todayWeather = [
+    { time: '15.00', temp: 31 },
+    { time: '16.00', temp: 30},
+    { time: '17.00', temp: 32 },
+    { time: '18.00', temp: 32 }
+  ];
+
+  constructor(private router: Router) { }
+
+  ngOnInit() { }
+
+  goToMainApp() {
+    this.router.navigate(['/main-weather']);
+  }
+
+  goToWelcomePage() {
+    this.router.navigate(['/welcome']);
+  }
+}

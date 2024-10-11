@@ -1,0 +1,79 @@
+.home-content {
+  --background: linear-gradient(to bottom, #3b8dff, #7324ff);
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.current-weather {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.weather-icon {
+  width: 300px;
+  margin: 1px auto;
+}
+
+.temperature {
+  font-size: 80px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: white;
+}
+
+.precipitation, .temp-range {
+  font-size: 20px;
+  color: white;
+}
+
+.hourly-forecast {
+  margin-top: 1px;
+}
+
+.hour {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.hourly-icon {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.hourly-temp {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+ion-card {
+  --background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+ion-card:hover {
+  transform: scale(1.05);
+}
+
+ion-card-content {
+  color: white;
+}
+
+ion-item {
+  --background: transparent;
+  color: white;
+}
+
+ion-label {
+  color: white;
+}
+
+ion-fab-button {
+  --background: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: url('./assets/background.jpg');
+  color: white;
+  text-align: center;
+}
+
+.icon {
+  width: 200px; /* Increase the size of the image */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 3em; /* Increase the font size */
+  font-weight: bold;
+  color: white;
+}
+
+h2 {
+  font-size: 2.5em; /* Increase the font size */
+  font-weight: bold;
+  color: #f3c43a;
+}
+
+.get-started-btn {
+  margin-top: 20px;
+  --background: #f3c43a;
+  --color: black;
+  font-weight: 600;
+  height: 70px; /* Increase the height of the button */
+  font-size: 1.5em; /* Increase the font size */
+  width: 80%; /* Make the button wider */
+  max-width: 300px; /* Optional: Limit the max width for larger screens */
+}

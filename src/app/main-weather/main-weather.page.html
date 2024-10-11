@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Main Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="main-weather-content">
+  <div class="container">
+    <div class="weather-info">
+      <p class="location">{{ WeatherData?.name }}</p>
+      <p class="temperature">Max: {{ WeatherData?.main?.temp_max }}° Min: {{ WeatherData?.main?.temp_min }}°</p>
+    </div>
+    
+    <div class="forecast">
+      <p class="forecast-title">7-Day Forecasts</p>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="1" class="arrow-button" (click)="previousForecast()">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </ion-col>
+          <ion-col size="10">
+            <ion-card *ngFor="let day of getCurrentForecast()" class="forecast-card">
+              <ion-card-header>
+                <ion-card-title>{{ day.day }}</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <img [src]="day.icon" [alt]="day.condition">
+                <p>{{ day.temp }}°C</p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col size="1" class="arrow-button" (click)="nextForecast()">
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <div class="details">
+      <ion-card class="detail-card">
+        <ion-card-content>
+          <ion-item lines="none">
+            <ion-icon name="leaf-outline" slot="start"></ion-icon>
+            <ion-label>Air Quality</ion-label>
+            <ion-badge color="warning">{{ airQuality }}</ion-badge>
+          </ion-item>
+          <ion-button class= "see-more" fill="clear" color="light" (click)="goToSeeMore()">See more</ion-button>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="detail-card">
+        <ion-card-content>
+          <ion-item lines="none">
+            <ion-icon name="sunny-outline" slot="start"></ion-icon>
+            <ion-label>Sunrise</ion-label>
+            <ion-badge color="light">{{ WeatherData?.sys?.sunrise }}</ion-badge>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="detail-card">
+        <ion-card-content>
+          <ion-item lines="none">
+            <ion-icon name="sunny-outline" slot="start"></ion-icon>
+            <ion-label>UV Index</ion-label>
+            <ion-badge color="tertiary">{{ uvIndex }}</ion-badge>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button translucent (click)="goToHomePage()">
+      <ion-icon name="home"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button translucent (click)="goToWelcomePage()">
+      <ion-icon name="time"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

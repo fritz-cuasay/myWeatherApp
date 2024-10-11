@@ -1,0 +1,129 @@
+.main-weather-content {
+  --background: linear-gradient(to bottom, #3b8dff, #7324ff);
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.weather-info {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.location {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.temperature {
+  font-size: 18px;
+}
+
+.forecast {
+  text-align: center;
+  margin-top: 20px auto;
+}
+
+.forecast-title {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.forecast-card {
+  --background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+  margin: 5px;
+}
+
+.forecast-card:hover {
+  transform: scale(1.05);
+}
+
+.forecast-card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.forecast-card {
+  flex: 0 0 auto;
+}
+
+.forecast-card ion-card-content img {
+  max-width: 50px;
+}
+
+.forecast-card:last-child {
+  margin-left: auto;
+}
+
+.forecast-card:first-child {
+  margin-right: auto;
+}
+
+.forecast-card ion-card-content p {
+  margin-top: 10px;
+}
+
+.details {
+  margin-top: 20px;
+  color: white;
+}
+
+.detail-card {
+  --background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.arrow-button {
+  color: white;
+}
+
+.arrow-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.arrow-button ion-icon {
+  font-size: 24px;
+}
+
+.see-more {
+  --background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(x);
+  border-radius: 0.2px;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 0.2px;
+}
+
+detail-card:hover {
+  transform: scale(1.05);
+}
+
+ion-item {
+  --background: transparent;
+  color: white;
+}
+
+ion-label {
+  color: white;
+}
+
+ion-badge {
+  margin-left: auto;
+}
+
+ion-fab-button {
+  --background: rgba(255, 255, 255, 0.2);
+}

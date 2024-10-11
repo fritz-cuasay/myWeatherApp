@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Welcome</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="container">
+    <img src="assets/weather-icon.png" class="icon" alt="Weather Icon">
+    <h1>Weather</h1>
+    <h2>ForeCasts</h2>
+    <ion-button expand="block" (click)="showLocationPrompt()" class="get-started-btn">Get Start</ion-button>
+  </div>
+</ion-content>

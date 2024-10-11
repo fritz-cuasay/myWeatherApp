@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="home-content">
+ <!-- <ion-searchbar [(ngModel)]="city" (ngModelChange)="loadcityData" placeholder="Search for City" class="searchBar" animated></ion-searchbar> -->
+ <!-- <ion-searchbar [(ngModel)]="city" (search) placeholder="Search for City" class="searchBar" animated></ion-searchbar> -->
+ <ion-searchbar [(ngModel)]="city" (ngModelChange)="loadcityData()" placeholder="Search for City class" class="searchBar" animated></ion-searchbar>
+  <div class="container">
+    <div class="current-weather">
+      <img src="assets/weather-icon.png" alt="Weather Icon" class="weather-icon">
+      <h2 class="temperature">{{currentTemp}}°C</h2>
+      <p class="precipitation">Precipitations</p>
+      <p class="temp-range">Max: {{ maxTemp }}° Min: {{ minTemp }}°</p>
+    </div>
+
+    <div class="hourly-forecast">
+      <ion-card class="animated-card">
+        <ion-card-content>
+          <ion-item lines="none">
+            <ion-label>Today</ion-label>
+            <ion-label slot="end">{{ currentDate }}</ion-label>
+          </ion-item>
+          <ion-grid>
+            <ion-row>
+              <ion-col *ngFor="let hour of todayWeather">
+                <p class="hour">{{hour.time}}</p>
+                <img src="assets/icon/cloudy.png" alt="Weather Icon" class="hourly-icon">
+                <p class="hourly-temp">{{hour.temp}}°C</p>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed"> 
+    <ion-fab-button translucent (click)="goToMainApp()">
+      <ion-icon name="menu"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button translucent (click)="goToWelcomePage()">
+      <ion-icon name="home"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

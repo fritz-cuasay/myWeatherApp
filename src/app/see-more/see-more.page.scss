@@ -1,0 +1,50 @@
+.see-more-content {
+    --background: linear-gradient(to bottom, #3b8dff, #7324ff);
+    color: white;
+    padding: 20px;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .air-quality-info {
+    margin-bottom: 20px;
+  }
+  
+  .air-quality-icon {
+    font-size: 48px;
+    color: #ffffff;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+  
+  .detail-card {
+    --background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+    color: white;
+  }
+  
+  .animated-card:hover {
+    transform: scale(1.05);
+  }
+  
+  ion-card-header {
+    color: white;
+  }
+  
+  ion-card-title {
+    font-size: 18px;
+  }
+  
